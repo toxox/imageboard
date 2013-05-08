@@ -1,0 +1,1 @@
+This is my second attempt at a Rails application, after a botched first one. Here I will practice, test different stuff and try to make it more awesomer.

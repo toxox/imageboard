@@ -11,11 +11,7 @@
     </div>
   <% end %>
 
-  <!-- <%= f.hidden_field :discussion_id, value: params[:id] %> -->
-  <div class="field">
-    <%= f.label :discussion_id %><br />
-    <%= f.number_field :discussion_id %>
-  </div>
+  <%= f.hidden_field :discussion_id, value: params[:id] %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

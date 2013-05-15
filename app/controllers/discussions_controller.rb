@@ -4,12 +4,14 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all
+    @existing_discussions = Discussion.all
+    @discussion = Discussion.new
   end
 
   # GET /discussions/1
   # GET /discussions/1.json
   def show
+    @post = Post.new
   end
 
   # GET /discussions/new
@@ -31,7 +33,7 @@ class DiscussionsController < ApplicationController
         format.html { redirect_to @discussion, notice: 'Discussion was successfully created.' }
         format.json { render action: 'show', status: :created, location: @discussion }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'new', notice: @discussion.errors }
         format.json { render json: @discussion.errors, status: :unprocessable_entity }
       end
     end

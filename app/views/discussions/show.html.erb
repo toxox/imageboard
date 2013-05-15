@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<h3>Create new post:</h3>
+<%= render 'posts/form' %>
 <p>
   <strong>Name:</strong>
   <%= @discussion.name %>
@@ -11,10 +12,25 @@
 </p>
 
 <p>
+  <strong>Created at:</strong>
+  <%= @discussion.created_at %>
+</p>
+
+<p>
   <strong>Comment:</strong>
   <%= @discussion.comment %>
 </p>
-
+<h2>Posts:</h2>
+<p>
+  <% @discussion.posts.each do |post| %>
+    <strong>Name:</strong>
+    <%= post.name %> <br/>
+    <strong>Created at:</strong>
+    <%= post.created_at %> <br/>
+    <strong>Comment:</strong>
+    <%= post.comment %> <br/>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_discussion_path(@discussion) %> |
 <%= link_to 'Back', discussions_path %>

@@ -1,4 +1,7 @@
 <h1>Listing discussions</h1>
+<h3>Create new thread:</h3>
+<p id="notice"><%= notice %></p>
+<%= render 'form' %>
 
 <table>
   <thead>
@@ -6,18 +9,19 @@
       <th>Name</th>
       <th>Subject</th>
       <th>Comment</th>
-      <th></th>
+      <th>Created at</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @discussions.each do |discussion| %>
+    <% @existing_discussions.each do |discussion| %>
     <tr>
       <td><%= discussion.name %></td>
       <td><%= discussion.subject %></td>
       <td><%= discussion.comment %></td>
+      <td><%= discussion.created_at %></td>
       <td><%= link_to 'Show', discussion %></td>
       <td><%= link_to 'Edit', edit_discussion_path(discussion) %></td>
       <td><%= link_to 'Destroy', discussion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

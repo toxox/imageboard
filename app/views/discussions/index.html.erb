@@ -21,7 +21,7 @@
       <td><%= discussion.name %></td>
       <td><%= discussion.subject %></td>
       <td><%= discussion.comment %></td>
-      <td><%= discussion.created_at %></td>
+      <td><%= format_time(discussion.created_at) %></td>
       <td><%= link_to 'Show', discussion %></td>
       <td><%= link_to 'Edit', edit_discussion_path(discussion) %></td>
       <td><%= link_to 'Destroy', discussion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

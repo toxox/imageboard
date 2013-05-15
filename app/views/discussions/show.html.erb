@@ -13,7 +13,7 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @discussion.created_at %>
+  <%= format_time(@discussion.created_at) %>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
     <strong>Name:</strong>
     <%= post.name %> <br/>
     <strong>Created at:</strong>
-    <%= post.created_at %> <br/>
+    <%= format_time(post.created_at)%> <br/>
     <strong>Comment:</strong>
     <%= post.comment %> <br/>
   <% end %>

@@ -4,10 +4,7 @@ class Discussion < ActiveRecord::Base
 
   has_many :posts, dependent: :destroy
 
-
-
-  validates :comment, :subject, presence: true
-  validates :comment, length: { maximum: 1000 }
-  validates :subject, length: { maximum: 25 }
-  validates :name, length: { maximum: 15 }
+  validates :comment, presence: true, length: { maximum: 5000 }
+  validates :subject, presence: true, length: { maximum: 50 }
+  validates :name, length: { maximum: 30 }
 end

@@ -4,7 +4,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :discussion
 
-
-
-  validates :comment, presence: true
+  validates :discussion_id, presence: true, numericality: true
+  validates :comment, presence: true, length: { maximum: 5000 }
 end

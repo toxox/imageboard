@@ -1,11 +1,12 @@
 Imageboard2::Application.routes.draw do
+  get "home/index"
   devise_for :users,  :path => "user", :path_names => { :sign_in => 'signin',
     :sign_out => 'signout' }
 
   resources :posts
   resources :discussions
 
-  root to: 'discussions#index'
+  root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

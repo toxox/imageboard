@@ -10,6 +10,8 @@ describe Discussion do
   it { should respond_to(:subject) }
   it { should respond_to(:comment) }
   it { should respond_to(:posts) }
+  it { should respond_to(:board_id) }
+
 
   describe "when comment is not present" do
     before { discussion.comment = '' }

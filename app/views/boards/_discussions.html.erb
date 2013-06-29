@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Comment</th>
+      <th>Created at</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discussions.each do |discussion| %>
+    <tr>
+      <td><%= discussion.name %></td>
+      <td><%= discussion.subject %></td>
+      <td><%= discussion.comment %></td>
+      <td><%= format_time(discussion.created_at) %></td>
+      <td><%= link_to 'Show', discussion %></td>
+      <td><%= link_to 'Edit', edit_discussion_path(discussion) %></td>
+      <td><%= link_to 'Destroy', discussion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

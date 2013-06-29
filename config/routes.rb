@@ -1,4 +1,6 @@
 Imageboard2::Application.routes.draw do
+  resources :boards
+
   get "home/index"
   devise_for :users,  :path => "user", :path_names => { :sign_in => 'signin',
     :sign_out => 'signout' }

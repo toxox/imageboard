@@ -2,9 +2,6 @@ class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show, :create]
 
-
-
-
   # GET /discussions
   # GET /discussions.json
   def index
@@ -75,6 +72,6 @@ class DiscussionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discussion_params
-      params.require(:discussion).permit(:name, :subject, :comment)
+      params.require(:discussion).permit(:name, :subject, :comment, :board_id)
     end
 end

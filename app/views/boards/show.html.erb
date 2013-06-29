@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'discussions/form' %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @board.name %>
+</p>
+
+<p>
+  <strong>Short name:</strong>
+  <%= @board.short_name %>
+</p>
+
+<%= render 'discussions' %>
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>

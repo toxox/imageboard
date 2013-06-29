@@ -1,6 +1,8 @@
 Imageboard2::Application.routes.draw do
-  resources :posts
+  devise_for :users,  :path => "user", :path_names => { :sign_in => 'signin',
+    :sign_out => 'signout' }
 
+  resources :posts
   resources :discussions
 
   root to: 'discussions#index'

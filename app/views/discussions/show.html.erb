@@ -20,15 +20,17 @@
   <strong>Comment:</strong>
   <%= @discussion.comment %>
 </p>
-<h2>Posts:</h2>
 <p>
-  <% @discussion.posts.each do |post| %>
-    <strong>Name:</strong>
-    <%= post.name %> <br/>
-    <strong>Created at:</strong>
-    <%= format_time(post.created_at)%> <br/>
-    <strong>Comment:</strong>
-    <%= post.comment %> <br/>
+  <% if @discussion.posts.any? %>
+    <h2>Posts:</h2>
+    <% @discussion.posts.each do |post| %>
+      <strong>Name:</strong>
+      <%= post.name %> <br/>
+      <strong>Created at:</strong>
+      <%= format_time(post.created_at)%> <br/>
+      <strong>Comment:</strong>
+      <%= post.comment %> <br/>
+    <% end %>
   <% end %>
 </p>
 

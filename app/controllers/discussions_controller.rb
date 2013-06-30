@@ -5,6 +5,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
+    @board = Board.find(params[:board_id])
     @existing_discussions = Discussion.all
     @discussion = Discussion.new
   end
@@ -12,21 +13,25 @@ class DiscussionsController < ApplicationController
   # GET /discussions/1
   # GET /discussions/1.json
   def show
+    @board = Board.find(params[:board_id])
     @post = Post.new
   end
 
   # GET /discussions/new
   def new
+    @board = Board.find(params[:board_id])
     @discussion = Discussion.new
   end
 
   # GET /discussions/1/edit
   def edit
+    @board = Board.find(params[:board_id])
   end
 
   # POST /discussions
   # POST /discussions.json
   def create
+    @board = Board.find(params[:board_id])
     @discussion = Discussion.new(discussion_params)
 
     respond_to do |format|
@@ -43,9 +48,10 @@ class DiscussionsController < ApplicationController
   # PATCH/PUT /discussions/1
   # PATCH/PUT /discussions/1.json
   def update
+    @board = Board.find(params[:board_id])
     respond_to do |format|
       if @discussion.update(discussion_params)
-        format.html { redirect_to @discussion, notice: 'Discussion was successfully updated.' }
+        format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,6 +63,7 @@ class DiscussionsController < ApplicationController
   # DELETE /discussions/1
   # DELETE /discussions/1.json
   def destroy
+    @board = Board.find(params[:board_id])
     @discussion.destroy
     respond_to do |format|
       format.html { redirect_to discussions_url }

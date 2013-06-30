@@ -1,12 +1,14 @@
 Imageboard2::Application.routes.draw do
-  resources :boards
+
+  resources :boards do
+      resources :discussions
+  end
 
   get "home/index"
   devise_for :users,  :path => "user", :path_names => { :sign_in => 'signin',
     :sign_out => 'signout' }
 
   resources :posts
-  resources :discussions
 
   root to: 'home#index'
 

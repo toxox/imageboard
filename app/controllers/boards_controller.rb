@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
   # GET /boards/1.json
   def show
     @discussion = Discussion.new
-    @discussions = Discussion.all
+    @discussions = @board.discussions
   end
 
   # GET /boards/new

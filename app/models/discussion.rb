@@ -8,4 +8,6 @@ class Discussion < ActiveRecord::Base
   validates :comment, presence: true, length: { maximum: 5000 }
   validates :subject, presence: true, length: { maximum: 50 }
   validates :name, length: { maximum: 30 }
+  validates :board_id, presence: true, numericality: true
+
 end

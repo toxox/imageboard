@@ -7,7 +7,7 @@ class DiscussionsController < ApplicationController
   def index
     @board = Board.find(params[:board_id])
     @existing_discussions = Discussion.all
-    @discussion = Discussion.new
+    @discussion = Discussion.new(discussion_params)
   end
 
   # GET /discussions/1
@@ -39,7 +39,7 @@ class DiscussionsController < ApplicationController
         format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully created.' }
         format.json { render action: 'show', status: :created, location: @discussion }
       else
-        format.html { render action: 'new', notice: @discussion.errors }
+        format.html { redirect_to @board, notice: @discussion.errors }
         format.json { render json: @discussion.errors, status: :unprocessable_entity }
       end
     end

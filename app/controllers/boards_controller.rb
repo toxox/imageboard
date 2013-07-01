@@ -59,7 +59,7 @@ class BoardsController < ApplicationController
   def destroy
     @board.destroy
     respond_to do |format|
-      format.html { redirect_to boards_url }
+      format.html { redirect_to boards_path }
       format.json { head :no_content }
     end
   end

@@ -36,7 +36,7 @@ class DiscussionsController < ApplicationController
 
     respond_to do |format|
       if @discussion.save
-        format.html { redirect_to @discussion, notice: 'Discussion was successfully created.' }
+        format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully created.' }
         format.json { render action: 'show', status: :created, location: @discussion }
       else
         format.html { render action: 'new', notice: @discussion.errors }
@@ -66,7 +66,7 @@ class DiscussionsController < ApplicationController
     @board = Board.find(params[:board_id])
     @discussion.destroy
     respond_to do |format|
-      format.html { redirect_to discussions_url }
+      format.html { redirect_to @board }
       format.json { head :no_content }
     end
   end

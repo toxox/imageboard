@@ -30,6 +30,9 @@
       <%= format_time(post.created_at)%> <br/>
       <strong>Comment:</strong>
       <%= post.comment %> <br/>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <br>
     <% end %>
   <% end %>
 </p>

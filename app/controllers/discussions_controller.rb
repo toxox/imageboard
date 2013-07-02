@@ -2,25 +2,10 @@ class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show, :create]
 
-  # GET /discussions
-  # GET /discussions.json
-  def index
-    @board = Board.find(params[:board_id])
-    @existing_discussions = Discussion.all
-    @discussion = Discussion.new(discussion_params)
-  end
-
   # GET /discussions/1
   # GET /discussions/1.json
   def show
-    @board = Board.find(params[:board_id])
     @post = Post.new
-  end
-
-  # GET /discussions/new
-  def new
-    @board = Board.find(params[:board_id])
-    @discussion = Discussion.new
   end
 
   # GET /discussions/1/edit

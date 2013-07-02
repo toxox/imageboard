@@ -6,6 +6,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions/1.json
   def show
     @post = Post.new
+    @board = Board.find(params[:board_id])
   end
 
   # GET /discussions/1/edit

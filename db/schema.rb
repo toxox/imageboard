@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130629150227) do
+ActiveRecord::Schema.define(version: 20130704190945) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20130629150227) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "board_id"
+    t.datetime "last_post_at"
   end
 
   create_table "posts", force: true do |t|

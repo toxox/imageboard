@@ -58,3 +58,4 @@ end
 
 gem 'devise', '3.0.0.rc'
 gem 'zurb-foundation'
+gem 'will_paginate'

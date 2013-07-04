@@ -13,7 +13,7 @@
       <%= discussion.comment %>
     </div>
     <% if discussion.posts.any? %>
-      <% discussion.posts.last(3).each do |post| %>
+      <% discussion.posts.reverse.last(3).each do |post| %>
         <div class="panel post-panel radius">
           <span><%= post.name %> - <%= format_time(post.created_at) %></span>
           <span class="right">

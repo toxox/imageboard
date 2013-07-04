@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
   # GET /boards/1.json
   def show
     @discussion = Discussion.new
-    @discussions = @board.discussions.includes(:posts).order("created_at desc")
+    @discussions = @board.discussions.includes(:posts).order("posts.created_at desc")
   end
 
   # GET /boards/new

@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= render 'discussions/form' %>
+<%= render 'shared/board_title' %>
+
+<div class="large-6 large-centered columns">
+  <%= render 'discussions/form' %>
+</div>
 
   <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
@@ -8,16 +12,9 @@
     <% end %>
   <% end -%>
 
-<p>
-  <strong>Name:</strong>
-  <%= @board.name %>
-</p>
-
-<p>
-  <strong>Short name:</strong>
-  <%= @board.short_name %>
-</p>
-
 <%= render 'discussions' %>
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_board_path(@board) %> |
+  <%= link_to 'Back', boards_path %>
+<% end %>

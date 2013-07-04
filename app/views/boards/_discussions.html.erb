@@ -1,26 +1,16 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Subject</th>
-      <th>Comment</th>
-      <th>Created at</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @discussions.each do |discussion| %>
-    <tr>
-      <td><%= discussion.name %></td>
-      <td><%= discussion.subject %></td>
-      <td><%= discussion.comment %></td>
-      <td><%= format_time(discussion.created_at) %></td>
-      <td><%= link_to 'Show', board_discussion_path(@board, discussion) %></td>
-      <td><%= link_to 'Edit', edit_board_discussion_path(@board, discussion) %></td>
-      <td><%= link_to 'Destroy', [@board, discussion], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @discussions.each do |discussion| %>
+  <div class="panel discussion-panel radius">
+    <span><%= discussion.subject%> by <%= discussion.name %> -
+      <%= format_time(discussion.created_at) %>
+      <%= link_to 'Show', board_discussion_path(@board, discussion) %></span>
+    <span class="right">
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_board_discussion_path(@board, discussion) %>
+        <%= link_to 'Destroy', [@board, discussion], method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </span>
+    <div class="comment">
+      <%= discussion.comment %>
+    </div>
+  </div>
+<% end %>

@@ -1,41 +1,41 @@
 <p id="notice"><%= notice %></p>
-<h3>Create new post:</h3>
-<%= render 'posts/form' %>
-<p>
-  <strong>Name:</strong>
-  <%= @discussion.name %>
-</p>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @discussion.subject %>
-</p>
+<%= render 'shared/board_title' %>
 
-<p>
-  <strong>Created at:</strong>
-  <%= format_time(@discussion.created_at) %>
-</p>
+<div class="large-6 large-centered columns">
+  <%= render 'posts/form' %>
+</div>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @discussion.comment %>
-</p>
-<p>
+<div class="panel discussion-panel radius">
+  <span><%= @discussion.subject%> by <%= @discussion.name %> -
+    <%= format_time(@discussion.created_at) %>
+  <span class="right">
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_board_discussion_path(@board, @discussion) %>
+      <%= link_to 'Destroy', [@board, @discussion], method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </span>
+  <div class="comment">
+    <%= @discussion.comment %>
+  </div>
+
   <% if @discussion.posts.any? %>
-    <h2>Posts:</h2>
     <% @discussion.posts.each do |post| %>
-      <strong>Name:</strong>
-      <%= post.name %> <br/>
-      <strong>Created at:</strong>
-      <%= format_time(post.created_at)%> <br/>
-      <strong>Comment:</strong>
-      <%= post.comment %> <br/>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <br>
+      <div class="panel post-panel radius">
+        <span><%= post.name %> - <%= format_time(post.created_at) %></span>
+        <span class="right">
+          <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete,
+             data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </span>
+        <div class="comment">
+          <%= post.comment %>
+        </div>
+      </div>
     <% end %>
   <% end %>
-</p>
+</div>
 
-
-<%= link_to 'Back', @board %>
+<%= link_to 'Back to Board', @board %>

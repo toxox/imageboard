@@ -12,5 +12,22 @@
     <div class="comment">
       <%= discussion.comment %>
     </div>
+    <% if discussion.posts.any? %>
+      <% discussion.posts.last(3).each do |post| %>
+        <div class="panel post-panel radius">
+          <span><%= post.name %> - <%= format_time(post.created_at) %></span>
+          <span class="right">
+            <% if user_signed_in? %>
+              <%= link_to 'Edit', edit_post_path(post) %>
+              <%= link_to 'Destroy', post, method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </span>
+          <div class="comment">
+            <%= post.comment %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 <% end %>

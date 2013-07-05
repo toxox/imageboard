@@ -1,5 +1,6 @@
-<%= will_paginate @discussions %>
-<br>
+<div class="pagination-centered">
+  <%= foundation_paginate @discussions %>
+</div>
 <% @discussions.each do |discussion| %>
   <div class="panel discussion-panel radius">
     <span><%= discussion.subject%> by <%= discussion.name %> -
@@ -33,5 +34,6 @@
     <% end %>
   </div>
 <% end %>
-
-<%= will_paginate @discussions %>
+<div class="pagination-centered">
+  <%= foundation_paginate @discussions %>
+</div>

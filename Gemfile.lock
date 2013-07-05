@@ -61,6 +61,7 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.0)
     formatador (0.2.4)
+    foundation-will_paginate (0.0.1)
     guard (1.8.1)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -196,6 +197,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0.rc)
   factory_girl_rails
+  foundation-will_paginate
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails

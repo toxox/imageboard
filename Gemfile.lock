@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/FriendlyId/friendly_id.git
+  revision: 5e6b292bb39ef5dbbe43ccbd983ff160a9408218
+  specs:
+    friendly_id (5.0.0.alpha1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -198,6 +204,7 @@ DEPENDENCIES
   devise (= 3.0.0.rc)
   factory_girl_rails
   foundation-will_paginate
+  friendly_id (~> 5.0.0.alpha1)!
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails

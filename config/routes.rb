@@ -1,7 +1,7 @@
 Imageboard2::Application.routes.draw do
 
   resources :boards do
-      resources :discussions, except: [:index]
+      resources :discussions, except: [:index], path: ''
   end
 
   get "home/index"

@@ -60,3 +60,4 @@ gem 'devise', '3.0.0.rc'
 gem 'zurb-foundation'
 gem 'will_paginate'
 gem 'foundation-will_paginate'
+gem "friendly_id", '~> 5.0.0.alpha1', :github => "FriendlyId/friendly_id"

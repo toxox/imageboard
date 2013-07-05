@@ -6,19 +6,19 @@ class DiscussionsController < ApplicationController
   # GET /discussions/1.json
   def show
     @post = Post.new
-    @board = Board.find(params[:board_id])
+    @board = Board.friendly.find(params[:board_id])
   end
 
   # GET /discussions/1/edit
   def edit
-    @board = Board.find(params[:board_id])
+    @board = Board.friendly.find(params[:board_id])
   end
 
   # POST /discussions
   # POST /discussions.json
   def create
-    @board = Board.find(params[:board_id])
-    @discussion = Discussion.new(discussion_params)
+    @board = Board.friendly.find(params[:board_id])
+    @discussion = @board.discussions.build(discussion_params)
 
     respond_to do |format|
       if @discussion.save
@@ -34,7 +34,7 @@ class DiscussionsController < ApplicationController
   # PATCH/PUT /discussions/1
   # PATCH/PUT /discussions/1.json
   def update
-    @board = Board.find(params[:board_id])
+    @board = Board.friendly.find(params[:board_id])
     respond_to do |format|
       if @discussion.update(discussion_params)
         format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully updated.' }
@@ -49,7 +49,7 @@ class DiscussionsController < ApplicationController
   # DELETE /discussions/1
   # DELETE /discussions/1.json
   def destroy
-    @board = Board.find(params[:board_id])
+    @board = Board.friendly.find(params[:board_id])
     @discussion.destroy
     respond_to do |format|
       format.html { redirect_to @board }

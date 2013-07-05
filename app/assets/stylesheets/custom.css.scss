@@ -14,6 +14,8 @@ body {
 
 .panel {
   padding: 8px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .comment {

@@ -1,3 +1,5 @@
+<%= will_paginate @discussions %>
+<br>
 <% @discussions.each do |discussion| %>
   <div class="panel discussion-panel radius">
     <span><%= discussion.subject%> by <%= discussion.name %> -
@@ -31,3 +33,5 @@
     <% end %>
   </div>
 <% end %>
+
+<%= will_paginate @discussions %>

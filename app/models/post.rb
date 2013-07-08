@@ -11,6 +11,8 @@ class Post < ActiveRecord::Base
   private
 
   def update_discussion_last_post_at
-    self.discussion.touch(:last_post_at) if self.discussion
+    unless self.discussion.posts.count > 300
+      self.discussion.touch(:last_post_at) if self.discussion
+    end
   end
 end

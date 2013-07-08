@@ -1,0 +1,35 @@
+<div class="contain-to-grid fixed">
+  <nav class="top-bar" data-options="is_hover:false">
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Home", root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="has-dropdown">
+          <a href="#">Boards</a>
+          <ul class="dropdown">
+            <% boards.each do |board| %>
+              <li><%= link_to board.name, board_path(board) %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+      <% if user_signed_in? %>
+        <ul class="right">
+          <li class="has-dropdown">
+            <a href="#">
+              <%= current_user.email %>
+            </a>
+            <ul class="dropdown">
+              <li><%= link_to 'Logout', destroy_user_session_path,
+                                                 method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      <% end -%>
+    </section>
+  </nav>
+</div>

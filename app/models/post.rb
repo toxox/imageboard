@@ -10,8 +10,12 @@ class Post < ActiveRecord::Base
 
   private
 
+  def bump_limit_reached?
+    self.discussion.posts.count > 300
+  end
+
   def update_discussion_last_post_at
-    unless self.discussion.posts.count > 300
+    unless bump_limit_reached?
       self.discussion.touch(:last_post_at) if self.discussion
     end
   end

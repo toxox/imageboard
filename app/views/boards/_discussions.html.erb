@@ -13,7 +13,7 @@
       <% end %>
     </span>
     <div class="comment">
-      <%= discussion.comment %>
+      <%= simple_format(discussion.comment) %>
     </div>
     <% if discussion.posts.any? %>
       <% discussion.posts.last(3).each do |post| %>
@@ -27,7 +27,7 @@
             <% end %>
           </span>
           <div class="comment">
-            <%= post.comment %>
+            <%= simple_format(post.comment) %>
           </div>
         </div>
       <% end %>

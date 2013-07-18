@@ -1,0 +1,248 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'coffee-script' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose node symlink /usr/bin/node
+5 verbose read json /usr/lib/package.json
+6 verbose read json /usr/lib/package.json
+7 verbose cache add [ 'coffee-script', null ]
+8 verbose cache add name=undefined spec="coffee-script" args=["coffee-script",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'coffee-script',
+9 verbose parsed url   path: 'coffee-script',
+9 verbose parsed url   href: 'coffee-script' }
+10 silly lockFile ab358269-coffee-script coffee-script
+11 verbose lock coffee-script /home/toxox/.npm/ab358269-coffee-script.lock
+12 silly lockFile ab358269-coffee-script coffee-script
+13 silly lockFile ab358269-coffee-script coffee-script
+14 verbose addNamed [ 'coffee-script', '' ]
+15 verbose addNamed [ null, '' ]
+16 silly lockFile 53951495-coffee-script coffee-script@
+17 verbose lock coffee-script@ /home/toxox/.npm/53951495-coffee-script.lock
+18 silly addNameRange { name: 'coffee-script', range: '', hasData: false }
+19 verbose url raw coffee-script
+20 verbose url resolving [ 'https://registry.npmjs.org/', './coffee-script' ]
+21 verbose url resolved https://registry.npmjs.org/coffee-script
+22 info trying registry request attempt 1 at 16:34:36
+23 verbose etag "4SERN669FTVR28WAALP09FCNQ"
+24 http GET https://registry.npmjs.org/coffee-script
+25 http 200 https://registry.npmjs.org/coffee-script
+26 silly registry.get cb [ 200,
+26 silly registry.get   { vary: 'Accept',
+26 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+26 silly registry.get     etag: '"8XIAM16NLT5SVAJ6ANLLE0DVL"',
+26 silly registry.get     date: 'Wed, 10 Jul 2013 13:34:38 GMT',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'content-length': '41315' } ]
+27 silly addNameRange number 2 { name: 'coffee-script', range: '', hasData: true }
+28 silly addNameRange versions [ 'coffee-script',
+28 silly addNameRange   [ '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '0.9.2',
+28 silly addNameRange     '0.9.3',
+28 silly addNameRange     '0.9.4',
+28 silly addNameRange     '0.9.5',
+28 silly addNameRange     '0.9.6',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.0.1',
+28 silly addNameRange     '1.1.0',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.1.2',
+28 silly addNameRange     '1.1.3',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.1',
+28 silly addNameRange     '1.3.2',
+28 silly addNameRange     '1.3.3',
+28 silly addNameRange     '1.4.0',
+28 silly addNameRange     '1.5.0',
+28 silly addNameRange     '1.6.0',
+28 silly addNameRange     '1.6.1',
+28 silly addNameRange     '1.6.2',
+28 silly addNameRange     '1.6.3' ] ]
+29 verbose addNamed [ 'coffee-script', '1.6.3' ]
+30 verbose addNamed [ '1.6.3', '1.6.3' ]
+31 silly lockFile 15ab88ca-coffee-script-1-6-3 coffee-script@1.6.3
+32 verbose lock coffee-script@1.6.3 /home/toxox/.npm/15ab88ca-coffee-script-1-6-3.lock
+33 silly lockFile a0d97ffe-e-script-coffee-script-1-6-3-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz
+34 verbose lock https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz /home/toxox/.npm/a0d97ffe-e-script-coffee-script-1-6-3-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz',
+35 verbose addRemoteTarball   '6355d32cf1b04cdff6b484e5e711782b2f0c39be' ]
+36 info retry fetch attempt 1 at 16:34:39
+37 verbose fetch to= /home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz
+38 http GET https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz
+39 http 200 https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz
+40 verbose tar unpack /home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz
+41 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+42 verbose lock tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package /home/toxox/.npm/715b9906-9726-0-14459038362838328-package.lock
+43 silly lockFile 75b947fa-9726-0-14459038362838328-tmp-tgz tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz
+44 verbose lock tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz /home/toxox/.npm/75b947fa-9726-0-14459038362838328-tmp-tgz.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm extractEntry .npmignore
+48 silly gunzTarPerm extractEntry README
+49 silly gunzTarPerm extractEntry LICENSE
+50 silly gunzTarPerm extractEntry CNAME
+51 silly gunzTarPerm extractEntry CONTRIBUTING.md
+52 silly gunzTarPerm extractEntry Rakefile
+53 silly gunzTarPerm extractEntry bin/cake
+54 silly gunzTarPerm extractEntry bin/coffee
+55 silly gunzTarPerm extractEntry lib/coffee-script/browser.js
+56 silly gunzTarPerm extractEntry lib/coffee-script/grammar.js
+57 silly gunzTarPerm extractEntry lib/coffee-script/helpers.js
+58 silly gunzTarPerm extractEntry lib/coffee-script/index.js
+59 silly gunzTarPerm extractEntry lib/coffee-script/command.js
+60 silly gunzTarPerm extractEntry lib/coffee-script/nodes.js
+61 silly gunzTarPerm extractEntry lib/coffee-script/optparse.js
+62 silly gunzTarPerm extractEntry lib/coffee-script/parser.js
+63 silly gunzTarPerm extractEntry lib/coffee-script/repl.js
+64 silly gunzTarPerm extractEntry lib/coffee-script/rewriter.js
+65 silly gunzTarPerm extractEntry lib/coffee-script/coffee-script.js
+66 silly gunzTarPerm extractEntry lib/coffee-script/scope.js
+67 silly gunzTarPerm extractEntry lib/coffee-script/cake.js
+68 silly gunzTarPerm extractEntry lib/coffee-script/sourcemap.js
+69 silly gunzTarPerm extractEntry lib/coffee-script/lexer.js
+70 verbose read json /home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package/package.json
+71 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+72 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+73 silly lockFile 75b947fa-9726-0-14459038362838328-tmp-tgz tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz
+74 silly lockFile 75b947fa-9726-0-14459038362838328-tmp-tgz tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/tmp.tgz
+75 verbose from cache /home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package/package.json
+76 verbose tar pack [ '/home/toxox/.npm/coffee-script/1.6.3/package.tgz',
+76 verbose tar pack   '/home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package' ]
+77 verbose tarball /home/toxox/.npm/coffee-script/1.6.3/package.tgz
+78 verbose folder /home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+79 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+80 verbose lock tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package /home/toxox/.npm/715b9906-9726-0-14459038362838328-package.lock
+81 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+82 verbose lock tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz /home/toxox/.npm/6d9cb83b--coffee-script-1-6-3-package-tgz.lock
+83 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+84 silly lockFile 715b9906-9726-0-14459038362838328-package tar:///home/toxox/tmp/npm-15250/1373463279726-0.14459038362838328/package
+85 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+86 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+87 silly lockFile fce86452--npm-coffee-script-1-6-3-package /home/toxox/.npm/coffee-script/1.6.3/package
+88 verbose lock /home/toxox/.npm/coffee-script/1.6.3/package /home/toxox/.npm/fce86452--npm-coffee-script-1-6-3-package.lock
+89 silly lockFile fce86452--npm-coffee-script-1-6-3-package /home/toxox/.npm/coffee-script/1.6.3/package
+90 silly lockFile fce86452--npm-coffee-script-1-6-3-package /home/toxox/.npm/coffee-script/1.6.3/package
+91 verbose tar unpack /home/toxox/.npm/coffee-script/1.6.3/package.tgz
+92 silly lockFile a45a63c8--npm-coffee-script-1-6-3-package tar:///home/toxox/.npm/coffee-script/1.6.3/package
+93 verbose lock tar:///home/toxox/.npm/coffee-script/1.6.3/package /home/toxox/.npm/a45a63c8--npm-coffee-script-1-6-3-package.lock
+94 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+95 verbose lock tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz /home/toxox/.npm/6d9cb83b--coffee-script-1-6-3-package-tgz.lock
+96 silly gunzTarPerm modes [ '755', '644' ]
+97 silly gunzTarPerm extractEntry package.json
+98 silly gunzTarPerm extractEntry .npmignore
+99 silly gunzTarPerm extractEntry README
+100 silly gunzTarPerm extractEntry LICENSE
+101 silly gunzTarPerm extractEntry CNAME
+102 silly gunzTarPerm extractEntry CONTRIBUTING.md
+103 silly gunzTarPerm extractEntry Rakefile
+104 silly gunzTarPerm extractEntry bin/cake
+105 silly gunzTarPerm extractEntry bin/coffee
+106 silly gunzTarPerm extractEntry lib/coffee-script/browser.js
+107 silly gunzTarPerm extractEntry lib/coffee-script/grammar.js
+108 silly gunzTarPerm extractEntry lib/coffee-script/helpers.js
+109 silly gunzTarPerm extractEntry lib/coffee-script/index.js
+110 silly gunzTarPerm extractEntry lib/coffee-script/command.js
+111 silly gunzTarPerm extractEntry lib/coffee-script/nodes.js
+112 silly gunzTarPerm extractEntry lib/coffee-script/optparse.js
+113 silly gunzTarPerm extractEntry lib/coffee-script/parser.js
+114 silly gunzTarPerm extractEntry lib/coffee-script/repl.js
+115 silly gunzTarPerm extractEntry lib/coffee-script/rewriter.js
+116 silly gunzTarPerm extractEntry lib/coffee-script/coffee-script.js
+117 silly gunzTarPerm extractEntry lib/coffee-script/scope.js
+118 silly gunzTarPerm extractEntry lib/coffee-script/cake.js
+119 silly gunzTarPerm extractEntry lib/coffee-script/sourcemap.js
+120 silly gunzTarPerm extractEntry lib/coffee-script/lexer.js
+121 verbose read json /home/toxox/.npm/coffee-script/1.6.3/package/package.json
+122 silly lockFile a45a63c8--npm-coffee-script-1-6-3-package tar:///home/toxox/.npm/coffee-script/1.6.3/package
+123 silly lockFile a45a63c8--npm-coffee-script-1-6-3-package tar:///home/toxox/.npm/coffee-script/1.6.3/package
+124 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+125 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+126 verbose from cache /home/toxox/.npm/coffee-script/1.6.3/package/package.json
+127 verbose chmod /home/toxox/.npm/coffee-script/1.6.3/package.tgz 644
+128 verbose chown /home/toxox/.npm/coffee-script/1.6.3/package.tgz [ 1000, 1000 ]
+129 silly lockFile a0d97ffe-e-script-coffee-script-1-6-3-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz
+130 silly lockFile a0d97ffe-e-script-coffee-script-1-6-3-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz
+131 silly lockFile 15ab88ca-coffee-script-1-6-3 coffee-script@1.6.3
+132 silly lockFile 15ab88ca-coffee-script-1-6-3 coffee-script@1.6.3
+133 silly lockFile 53951495-coffee-script coffee-script@
+134 silly lockFile 53951495-coffee-script coffee-script@
+135 silly resolved [ { name: 'coffee-script',
+135 silly resolved     description: 'Unfancy JavaScript',
+135 silly resolved     keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+135 silly resolved     author: { name: 'Jeremy Ashkenas' },
+135 silly resolved     version: '1.6.3',
+135 silly resolved     licenses: [ [Object] ],
+135 silly resolved     engines: { node: '>=0.8.0' },
+135 silly resolved     directories: { lib: './lib/coffee-script' },
+135 silly resolved     main: './lib/coffee-script/coffee-script',
+135 silly resolved     bin: { coffee: './bin/coffee', cake: './bin/cake' },
+135 silly resolved     scripts: { test: 'node ./bin/cake test' },
+135 silly resolved     homepage: 'http://coffeescript.org',
+135 silly resolved     bugs: { url: 'https://github.com/jashkenas/coffee-script/issues' },
+135 silly resolved     repository:
+135 silly resolved      { type: 'git',
+135 silly resolved        url: 'git://github.com/jashkenas/coffee-script.git' },
+135 silly resolved     devDependencies: { 'uglify-js': '~2.2', jison: '>=0.2.0' },
+135 silly resolved     readme: '\n            {\n         }   }   {\n        {   {  }  }\n         }   }{  {\n        {  }{  }  }                    _____       __  __\n       ( }{ }{  { )                   / ____|     / _|/ _|\n     .- { { }  { }} -.               | |     ___ | |_| |_ ___  ___\n    (  ( } { } { } }  )              | |    / _ \\|  _|  _/ _ \\/ _ \\\n    |`-..________ ..-\'|              | |___| (_) | | | ||  __/  __/\n    |                 |               \\_____\\___/|_| |_| \\___|\\___|\n    |                 ;--.\n    |                (__  \\            _____           _       _\n    |                 | )  )          / ____|         (_)     | |\n    |                 |/  /          | (___   ___ _ __ _ _ __ | |_\n    |                 (  /            \\___ \\ / __| \'__| | \'_ \\| __|\n    |                 |/              ____) | (__| |  | | |_) | |_\n    |                 |              |_____/ \\___|_|  |_| .__/ \\__|\n     `-.._________..-\'                                  | |\n                                                        |_|\n\n\n  CoffeeScript is a little language that compiles into JavaScript.\n\n  Install Node.js, and then the CoffeeScript compiler:\n  sudo bin/cake install\n\n  Or, if you have the Node Package Manager installed:\n  npm install -g coffee-script\n  (Leave off the -g if you don\'t wish to install globally.)\n\n  Execute a script:\n  coffee /path/to/script.coffee\n\n  Compile a script:\n  coffee -c /path/to/script.coffee\n\n  For documentation, usage, and examples, see:\n  http://coffeescript.org/\n\n  To suggest a feature, report a bug, or general discussion:\n  http://github.com/jashkenas/coffee-script/issues/\n\n  If you\'d like to chat, drop by #coffeescript on Freenode IRC,\n  or on webchat.freenode.net.\n\n  The source repository:\n  git://github.com/jashkenas/coffee-script.git\n\n  All contributors are listed here:\n  http://github.com/jashkenas/coffee-script/contributors\n',
+135 silly resolved     readmeFilename: 'README',
+135 silly resolved     _id: 'coffee-script@1.6.3',
+135 silly resolved     dist: { shasum: '59bb7f56835ca3f038ead58d64f7699686c805fc' },
+135 silly resolved     _from: 'coffee-script@',
+135 silly resolved     _resolved: 'https://registry.npmjs.org/coffee-script/-/coffee-script-1.6.3.tgz' } ]
+136 info install coffee-script@1.6.3 into /usr/lib
+137 info installOne coffee-script@1.6.3
+138 verbose from cache /home/toxox/.npm/coffee-script/1.6.3/package/package.json
+139 info /usr/lib/node_modules/coffee-script unbuild
+140 verbose read json /usr/lib/node_modules/coffee-script/package.json
+141 verbose tar unpack /home/toxox/.npm/coffee-script/1.6.3/package.tgz
+142 silly lockFile ac7c323f-r-lib-node-modules-coffee-script tar:///usr/lib/node_modules/coffee-script
+143 verbose lock tar:///usr/lib/node_modules/coffee-script /home/toxox/.npm/ac7c323f-r-lib-node-modules-coffee-script.lock
+144 silly lockFile 6d9cb83b--coffee-script-1-6-3-package-tgz tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz
+145 verbose lock tar:///home/toxox/.npm/coffee-script/1.6.3/package.tgz /home/toxox/.npm/6d9cb83b--coffee-script-1-6-3-package-tgz.lock
+146 silly gunzTarPerm modes [ '755', '644' ]
+147 error Error: EACCES, mkdir '/usr/lib/node_modules/coffee-script'
+147 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/coffee-script']
+147 error   errno: 3,
+147 error   code: 'EACCES',
+147 error   path: '/usr/lib/node_modules/coffee-script',
+147 error   fstream_type: 'Directory',
+147 error   fstream_path: '/usr/lib/node_modules/coffee-script',
+147 error   fstream_class: 'DirWriter',
+147 error   fstream_stack:
+147 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+147 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+147 error      'Object.oncomplete (fs.js:107:15)' ] }
+148 error Please try running this command again as root/Administrator.
+149 error System Linux 3.5.0-17-generic
+150 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "coffee-script"
+151 error cwd /home/toxox/Projects/rails_projects/imageboard
+152 error node -v v0.10.12
+153 error npm -v 1.2.32
+154 error path /usr/lib/node_modules/coffee-script
+155 error fstream_path /usr/lib/node_modules/coffee-script
+156 error fstream_type Directory
+157 error fstream_class DirWriter
+158 error code EACCES
+159 error errno 3
+160 error stack Error: EACCES, mkdir '/usr/lib/node_modules/coffee-script'
+161 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+161 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+161 error fstream_stack Object.oncomplete (fs.js:107:15)
+162 verbose exit [ 3, true ]

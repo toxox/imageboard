@@ -17,6 +17,7 @@
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -29,8 +30,6 @@
       <%= yield %>
     </div>
   </div>
-
-    <%= javascript_include_tag "application" %>
 
     <%= debug(params) if Rails.env.development? %>
   </body>

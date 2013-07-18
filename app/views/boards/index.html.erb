@@ -5,7 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Short name</th>
-      <th></th>
+      <th># of Disc-s</th>
       <th></th>
       <th></th>
     </tr>
@@ -16,6 +16,7 @@
       <tr>
         <td><%= board.name %></td>
         <td><%= board.short_name %></td>
+        <td><%= board.number_of_discussions %></td>
         <td><%= link_to 'Show', board %></td>
         <td><%= link_to 'Edit', edit_board_path(board) %></td>
         <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>

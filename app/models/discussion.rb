@@ -18,7 +18,7 @@ class Discussion < ActiveRecord::Base
   end
 
   def destroy_old_discussions
-    if Discussion.count >= 30
+    if Discussion.count >= self.board.number_of_discussions
       Discussion.order('last_post_at').first.destroy
     end
   end

@@ -1,6 +1,6 @@
 class Discussion < ActiveRecord::Base
   include EmptyNameHelper
-  before_save :set_name_to_anon_if_empty
+  before_save :set_name_to_anon_if_empty, :destroy_old_discussions
   before_create :set_last_post_at
 
   has_many :posts, dependent: :destroy
@@ -15,5 +15,11 @@ class Discussion < ActiveRecord::Base
 
   def set_last_post_at
     self.last_post_at = self.created_at || Time.now
+  end
+
+  def destroy_old_discussions
+    if Discussion.count >= 30
+      Discussion.order('last_post_at').first.destroy
+    end
   end
 end

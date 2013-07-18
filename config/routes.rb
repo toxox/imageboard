@@ -1,5 +1,5 @@
 Imageboard2::Application.routes.draw do
-
+  match 'boards/:id/edit', to: 'boards#edit', via: [:post, :get]
   resources :boards do
       resources :discussions, except: [:index], path: ''
   end

@@ -5,13 +5,14 @@
   <div class="panel discussion-panel radius">
     <span><%= discussion.subject%> by <%= discussion.name %> -
       <%= format_time(discussion.created_at) %>
-      <%= link_to 'Show', board_discussion_path(@board, discussion) %></span>
+      <%= link_to 'Show', board_discussion_path(@board, discussion), class: "tiny button radius show" %></span>
     <span class="right">
       <% if user_signed_in? %>
-        <%= link_to 'Edit', edit_board_discussion_path(@board, discussion) %>
-        <%= link_to 'Destroy', [@board, discussion], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_board_discussion_path(@board, discussion), class: "tiny button radius" %>
+        <%= link_to 'Destroy', [@board, discussion], method: :delete, data: { confirm: 'Are you sure?' }, class: "tiny button radius" %>
       <% end %>
     </span>
+    <hr>
     <div class="comment">
       <%= simple_format(discussion.comment) %>
     </div>
@@ -21,11 +22,12 @@
           <span><%= post.name %> - <%= format_time(post.created_at) %></span>
           <span class="right">
             <% if user_signed_in? %>
-              <%= link_to 'Edit', edit_post_path(post) %>
+              <%= link_to 'Edit', edit_post_path(post), class: "tiny button radius" %>
               <%= link_to 'Destroy', post, method: :delete,
-                data: { confirm: 'Are you sure?' } %>
+                data: { confirm: 'Are you sure?' }, class: "tiny button radius" %>
             <% end %>
           </span>
+          <hr>
           <div class="comment">
             <%= simple_format(post.comment) %>
           </div>

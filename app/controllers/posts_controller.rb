@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:create]
 
+
   # GET /posts/1/edit
   def edit
     session[:return_to] = request.referer

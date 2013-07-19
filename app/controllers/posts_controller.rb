@@ -11,13 +11,13 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    @discussion = Discussion.find(@post.discussion_id)
     respond_to do |format|
       if @post.save
-        format.html { redirect_to :back, notice: 'Post was successfully created.' }
+        format.html { redirect_to :back, flash: {success: 'Post was successfully created.' }}
         format.json { render action: 'show', status: :created, location: @post }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to :back, alert: "Post could not be created." }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end

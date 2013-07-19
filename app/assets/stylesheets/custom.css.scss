@@ -1,6 +1,6 @@
 body {
-  padding-bottom: 20px;
   padding-top: 45px;
+  padding-bottom: 20px;
 }
 
 #board-title {
@@ -48,4 +48,8 @@ body {
 
 .pagination-centered {
   clear: both;
+}
+
+.row {
+  padding-top: 20px;
 }

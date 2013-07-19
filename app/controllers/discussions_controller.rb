@@ -22,10 +22,10 @@ class DiscussionsController < ApplicationController
 
     respond_to do |format|
       if @discussion.save
-        format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully created.' }
+        format.html { redirect_to board_discussion_path(@board, @discussion), flash: {success: 'Discussion was successfully created.' } }
         format.json { render action: 'show', status: :created, location: @discussion }
       else
-        format.html { redirect_to @board, notice: @discussion.errors }
+        format.html { redirect_to @board, alert: "Discussion could not be created." }
         format.json { render json: @discussion.errors, status: :unprocessable_entity }
       end
     end

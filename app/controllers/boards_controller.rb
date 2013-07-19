@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
   # GET /boards/1.json
   def show
     @discussion = Discussion.new
-    @discussions = @board.discussions.order("last_post_at desc").
+    @discussions = @board.discussions.order("sticky desc, last_post_at desc").
                                                 page(params[:page]).per_page(10)
   end
 

@@ -17,7 +17,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br />
+    <%= f.label :comment, title: "Comment is required",
+      data: { tooltip: true}, class: "tip-left" %><br />
     <%= f.text_area :comment %>
   </div>
   <div class="actions">

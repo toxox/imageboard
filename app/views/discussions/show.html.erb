@@ -22,7 +22,7 @@
   <div class="comment">
     <%= show(@discussion.comment) %>
   </div>
-  <%= image_tag(@discussion.image_url(:thumb)) if @discussion.image? %>
+  <%= thumb_with_link(@discussion) %>
 
   <% if @discussion.posts.any? %>
     <%= render 'posts' %>

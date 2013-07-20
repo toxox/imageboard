@@ -16,7 +16,7 @@
     <div class="comment">
       <%= show(discussion.comment) %>
     </div>
-    <%= image_tag(discussion.image_url(:thumb)) if discussion.image? %>
+    <%= thumb_with_link(discussion) %>
     <% if discussion.posts.any? %>
       <% discussion.posts.last(3).each do |post| %>
         <div class="panel post-panel radius">
@@ -32,7 +32,7 @@
           <div class="comment">
             <%= show(post.comment) %>
           </div>
-          <%= image_tag(post.image_url(:thumb)) if post.image? %>
+          <%= thumb_with_link(post) %>
 
         </div>
       <% end %>

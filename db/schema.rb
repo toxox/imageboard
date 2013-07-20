@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130719193048) do
+ActiveRecord::Schema.define(version: 20130720083145) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130719193048) do
     t.integer  "board_id"
     t.datetime "last_post_at"
     t.boolean  "sticky",       default: false
+    t.boolean  "closed",       default: false
   end
 
   create_table "posts", force: true do |t|

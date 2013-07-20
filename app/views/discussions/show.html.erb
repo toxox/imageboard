@@ -3,7 +3,9 @@
 <%= render 'shared/board_title' %>
 
 <div class="large-6 large-centered columns">
-  <%= render 'posts/form' %>
+  <% unless @discussion.closed %>
+    <%= render 'posts/form' %>
+  <% end %>
 </div>
 
 

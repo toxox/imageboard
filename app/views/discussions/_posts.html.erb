@@ -11,7 +11,7 @@
       </span>
       <hr>
       <div class="comment">
-        <%= simple_format(make_links(filter_comment(post.comment))) %>
+        <%= show(post.comment) %>
       </div>
     </div>
   <% end %>

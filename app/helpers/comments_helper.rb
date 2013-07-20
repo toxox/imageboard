@@ -3,9 +3,10 @@ module CommentsHelper
     comment.gsub(/((http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?)/, '<a href=\'\1\'>\1</a>')
   end
 
+  #>greentext
   def filter_comment(comment)
-    str1 = '<span class = "quote">' #open greentext
-    str2 = '</span>' #close greentext
+    str1 = '<span class="quote">'
+    str2 = '</span>'
 
     if comment != nil
       arr_lines = comment.split(/\n/)
@@ -17,5 +18,9 @@ module CommentsHelper
       end
     end
     comment = arr_lines.join('')
+  end
+
+  def show(comment)
+    simple_format(make_links(filter_comment(comment)))
   end
 end

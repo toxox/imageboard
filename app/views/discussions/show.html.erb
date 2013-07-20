@@ -20,7 +20,7 @@
   </span>
   <hr>
   <div class="comment">
-    <%= simple_format(make_links(filter_comment(@discussion.comment))) %>
+    <%= show(@discussion.comment) %>
   </div>
 
   <% if @discussion.posts.any? %>

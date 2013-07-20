@@ -1,10 +1,12 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, except: [:show]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   # GET /boards
   # GET /boards.json
   def index
+    redirect_to root_path unless user_signed_in?
+
     @boards = Board.all
   end
 

@@ -14,7 +14,7 @@
     </span>
     <hr>
     <div class="comment">
-      <%= simple_format(make_links(discussion.comment)) %>
+      <%= simple_format(make_links(filter_comment(discussion.comment))) %>
     </div>
     <% if discussion.posts.any? %>
       <% discussion.posts.last(3).each do |post| %>
@@ -29,7 +29,7 @@
           </span>
           <hr>
           <div class="comment">
-            <%= simple_format(make_links(post.comment)) %>
+            <%= simple_format(make_links(filter_comment(post.comment))) %>
           </div>
         </div>
       <% end %>

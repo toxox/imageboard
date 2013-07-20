@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   include EmptyNameHelper
+  mount_uploader :image, ImageUploader
   before_save :set_name_to_anon_if_empty
   after_save :update_discussion_last_post_at
 

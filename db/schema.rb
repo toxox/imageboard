@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130720083145) do
+ActiveRecord::Schema.define(version: 20130720151530) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20130720083145) do
     t.datetime "last_post_at"
     t.boolean  "sticky",       default: false
     t.boolean  "closed",       default: false
+    t.string   "image"
   end
 
   create_table "posts", force: true do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20130720083145) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|

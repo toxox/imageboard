@@ -1,5 +1,6 @@
 class Discussion < ActiveRecord::Base
   include EmptyNameHelper
+  mount_uploader :image, ImageUploader
   before_save :set_name_to_anon_if_empty, :destroy_old_discussions
   before_create :set_last_post_at
 

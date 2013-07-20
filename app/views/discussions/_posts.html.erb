@@ -13,6 +13,8 @@
       <div class="comment">
         <%= show(post.comment) %>
       </div>
+      <%= image_tag(post.image_url(:thumb)) if post.image? %>
+
     </div>
   <% end %>
 <% end %>

@@ -61,3 +61,6 @@ gem 'zurb-foundation'
 gem 'will_paginate'
 gem 'foundation-will_paginate'
 gem "friendly_id", '~> 5.0.0.alpha1', :github => "FriendlyId/friendly_id"
+
+gem 'carrierwave'
+gem 'rmagick', '2.13.2'

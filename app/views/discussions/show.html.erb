@@ -19,10 +19,10 @@
     <% end %>
   </span>
   <hr>
-  <div class="comment">
-    <%= show(@discussion.comment) %>
+  <div class="op">
+    <span class="image"><%= thumb_with_link(@discussion) %></span>
+    <div class="comment"><%= show(@discussion.comment) %></div>
   </div>
-  <%= thumb_with_link(@discussion) %>
 
   <% if @discussion.posts.any? %>
     <%= render 'posts' %>

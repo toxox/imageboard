@@ -10,11 +10,10 @@
         <% end %>
       </span>
       <hr>
-      <div class="comment">
-        <%= show(post.comment) %>
+      <div class="post">
+        <span class="image"><%= thumb_with_link(post) %></span>
+        <div class="comment"><%= show(post.comment) %></div>
       </div>
-      <%= thumb_with_link(post) %>
-
     </div>
   <% end %>
 <% end %>

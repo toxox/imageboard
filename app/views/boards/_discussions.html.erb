@@ -13,10 +13,10 @@
       <% end %>
     </span>
     <hr>
-    <div class="comment">
-      <%= show(discussion.comment) %>
+    <div class="op">
+      <span class="image"><%= thumb_with_link(discussion) %></span>
+      <div class="comment"><%= show(discussion.comment) %></div>
     </div>
-    <%= thumb_with_link(discussion) %>
     <% if discussion.posts.any? %>
       <% discussion.posts.last(3).each do |post| %>
         <div class="panel post-panel radius">
@@ -29,11 +29,10 @@
             <% end %>
           </span>
           <hr>
-          <div class="comment">
-            <%= show(post.comment) %>
-          </div>
-          <%= thumb_with_link(post) %>
-
+        <div class="op">
+          <span class="image"><%= thumb_with_link(post) %></span>
+          <div class="comment"><%= show(post.comment) %></div>
+        </div>
         </div>
       <% end %>
     <% end %>

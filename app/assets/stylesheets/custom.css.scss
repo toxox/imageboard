@@ -38,6 +38,7 @@ body {
   p {
     margin-bottom: 0;
   }
+  // min-height: 170px;
 }
 
 .discussion-panel {
@@ -55,5 +56,14 @@ body {
 
 .row {
   padding-top: 20px;
+}
+
+.image {
+  float: left;
+  margin: 13px 10px 0px 0px;
+}
+.op {
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 

@@ -23,7 +23,7 @@ class Post < ActiveRecord::Base
   end
 
   def update_discussion_last_post_at
-    unless bump_limit_reached?
+    unless bump_limit_reached? || self.no_bump
       self.discussion.touch(:last_post_at) if self.discussion
     end
   end

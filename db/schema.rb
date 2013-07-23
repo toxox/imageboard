@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130720151530) do
+ActiveRecord::Schema.define(version: 20130723152447) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130720151530) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.boolean  "no_bump",       default: false
   end
 
   create_table "users", force: true do |t|

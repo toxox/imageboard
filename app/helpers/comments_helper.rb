@@ -1,6 +1,7 @@
 module CommentsHelper
+  URL_REGEXP = /((http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?)/
   def make_links(comment)
-    comment.gsub(/((http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?)/, '<a href=\'\1\'>\1</a>')
+    comment.gsub!(URL_REGEXP, '<a href=\'\1\'>\1</a>')
 
     post_links = comment.scan(/>>\d+/)
     post_links.each do |post_link|

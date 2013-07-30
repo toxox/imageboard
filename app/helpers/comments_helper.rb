@@ -4,8 +4,11 @@ module CommentsHelper
 
     post_links = comment.scan(/>>\d+/)
     post_links.each do |post_link|
-      comment.sub!(/#{post_link}/,
-                   link_to(">>#{post_link.sub!(/>>/, "")}", anchor: post_link))
+      post_link.sub!(/>>/, "")
+      if @discussion.posts.exists?(id: post_link)
+        comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
+                                                            anchor: post_link))
+      end
     end
     comment
   end

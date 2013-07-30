@@ -5,9 +5,16 @@ module CommentsHelper
     post_links = comment.scan(/>>\d+/)
     post_links.each do |post_link|
       post_link.sub!(/>>/, "")
-      if @discussion.posts.exists?(id: post_link)
-        comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
-                                                            anchor: post_link))
+      if params[:controller] == "discussions"
+        if @discussion.posts.exists?(id: post_link)
+          comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
+                                                          anchor: post_link))
+        end
+      elsif params[:controller] == "boards"
+        @discussions.each do |discussion|
+          comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
+                                                        [@board, discussion]))
+        end
       end
     end
     comment

@@ -30,3 +30,4 @@ environments:
 defaults:
   migrate: true
   migration_command: rake db:migrate
+  precompile_assets: true

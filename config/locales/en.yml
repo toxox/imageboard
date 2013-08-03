@@ -21,6 +21,3 @@
 
 en:
   hello: "Hello world"
-
-defaults:
-  precompile_assets: true

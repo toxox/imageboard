@@ -11,11 +11,12 @@ module CommentsHelper
           comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
                                                           anchor: post_link))
         end
+      #this is fucking stupid and probably slow.
       elsif params[:controller] == "boards"
-        @discussions.each do |discussion|
-          comment.sub!(/>>#{post_link}/, link_to(">>#{post_link}",
-                                                        [@board, discussion]))
-        end
+       discussion = Post.find(post_link).discussion
+        comment.gsub!(/>>#{post_link}/, link_to(">>#{post_link}",
+         board_discussion_path(@board, discussion)
+                                                        ))
       end
     end
     comment

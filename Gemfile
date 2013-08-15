@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -16,6 +16,10 @@ group :test do
   gem 'capybara'
   gem 'libnotify'
   gem 'factory_girl_rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Use SCSS for stylesheets

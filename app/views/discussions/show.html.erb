@@ -11,7 +11,11 @@
 
 <div class="panel discussion-panel radius">
   <span><%= @discussion.subject%> by <%= @discussion.name %> -
-    <%= format_time(@discussion.created_at) %>
+    <%= format_time(@discussion.created_at)  %> #<%= link_to @discussion.id, "javascript:;", class: "discussion_id" %>
+    <span class="anchor-container"><%= link_to '', {},
+              name: "OP", class: "post-anchor" %>
+    </span>
+
   <span class="right">
     <% if user_signed_in? %>
       <%= link_to 'Edit', edit_board_discussion_path(@board, @discussion),  class: "tiny button radius" %>

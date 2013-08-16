@@ -3,6 +3,10 @@ module CommentsHelper
   def make_links(comment)
     comment.gsub!(URL_REGEXP, '<a href=\'\1\'>\1</a>')
 
+    if params[:controller] == "discussions"
+      comment.gsub!(/>>OP/, link_to(">>OP", anchor: "OP"))
+    end
+
     post_links = comment.scan(/>>\d+/)
     post_links.each do |post_link|
       post_link.sub!(/>>/, "")
@@ -14,11 +18,11 @@ module CommentsHelper
       #this is fucking stupid and probably slow.
       elsif params[:controller] == "boards"
        discussion = Post.find(post_link).discussion
-        comment.gsub!(/>>#{post_link}/, link_to(">>#{post_link}",
-         board_discussion_path(@board, discussion)
-                                                        ))
+        comment.gsub!(/>>(#{post_link})/, link_to(">>#{post_link}",
+         board_discussion_path(@board, discussion)))
       end
     end
+
     comment
   end
 

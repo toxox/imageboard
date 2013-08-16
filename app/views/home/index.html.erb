@@ -1,2 +1,21 @@
-<h1>Home page here</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, harum, voluptatibus, voluptatem, maxime recusandae consequatur fugiat earum ex ipsam beatae cumque inventore nobis quos commodi porro pariatur consequuntur expedita nam?</p>
+<% provide(:title, "Imageboard") %>
+<div class="row">
+  <div class="small-9 columns">
+    <h1>Hello there!</h1>
+    <p>This is a simple imageboard written in Ruby and Ruby on Rails
+    simply for kicks and testing cool stuff.</p>
+    <p>Now pick a board from the list and mess around.</p>
+  </div>
+  <div class="small-3 columns">
+    <ul class="side-nav">
+      <div class="panel">
+        <h5>Available boards</h5>
+        <% boards.each do |board| %>
+          <li>
+            <%= link_to "/#{board.short_name}/ - #{board.name}", board %>
+          </li>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+</div>

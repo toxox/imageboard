@@ -11,7 +11,8 @@
 
 <div class="panel discussion-panel radius">
   <span><%= @discussion.subject%> by <%= @discussion.name %> -
-    <%= format_time(@discussion.created_at)  %> #<%= link_to @discussion.id, "javascript:;", class: "discussion_id" %>
+    <%= format_time(@discussion.created_at)  %>
+    #<%= link_to @discussion.id, "javascript:;", class: "discussion_id" %>
     <span class="anchor-container"><%= link_to '', {},
               name: "OP", class: "post-anchor" %>
     </span>

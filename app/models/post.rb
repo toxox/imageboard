@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :discussion
 
+  validates :name, length: { maximum: 25 }
   validates :discussion_id, presence: true, numericality: true
   validates :comment, presence: true, length: { maximum: 5000 }
   validate :discussion_is_not_closed
@@ -13,6 +14,7 @@ class Post < ActiveRecord::Base
   def discussion_is_not_closed
     if self.discussion.closed
       errors.add(:discussion, "is closed.")
+      return false
     end
   end
 

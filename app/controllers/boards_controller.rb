@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
   def show
     @discussion = Discussion.new
     @discussions = @board.discussions.order("sticky desc, last_post_at desc").
-                                                page(params[:page]).per_page(3)
+                                                page(params[:page]).per_page(10)
   end
 
   # GET /boards/new

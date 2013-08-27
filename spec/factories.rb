@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :board do
     sequence(:name) { |n| "Board#{n}"}
     sequence(:short_name) { |n| "b#{n}"}
-    number_of_discussions 5
+    number_of_discussions 20
   end
 
   factory :discussion do

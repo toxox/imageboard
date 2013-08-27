@@ -69,14 +69,14 @@ describe Discussion do
 
   describe "when destroying old discussions" do
     before do
-      6.times do
+      21.times do
         @discussion = Discussion.new(name: "Name", subject: "Subject",
                   comment: "Comment", board_id: board.id, image: "test.png")
         @discussion.save!
       end
     end
     it "should destroy old discussions" do
-      expect(board.discussions.count).to eq(5)
+      expect(board.discussions.count).to eq(20)
     end
   end
 

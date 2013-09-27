@@ -52,6 +52,10 @@ describe "Board pages" do
         visit board_path(board.id)
       end
 
+      it { should have_content "1 post omitted.
+                                  Click Show to view the discussion."}
+      it { should have_css ".omitted-posts"}
+
       it { should_not have_content "Comment1"}
       it { should_not have_content "Name1"}
 

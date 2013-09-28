@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -47,5 +47,21 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  def image
+    @image ||= MiniMagick::Image.open( model.send(mounted_as).path )
+  end
+
+  def width
+     image[:width]
+  end
+
+  def height
+    image[:height]
+  end
+
+  def filename
+    self.path.split('/').last if self.present?
+  end
 
 end

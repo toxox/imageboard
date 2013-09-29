@@ -13,10 +13,6 @@ describe "Images" do
   end
   let(:image) { @discussion.image }
 
-  after do
-    @discussion.dest
-  end
-
   it { should have_css(".image-info") }
   it { should have_selector("img") }
   it { should have_link("#{image.filename}", href: image.url) }

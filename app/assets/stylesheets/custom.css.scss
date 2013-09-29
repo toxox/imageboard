@@ -59,7 +59,8 @@ body {
 
 .image {
   float: left;
-  margin: 13px 10px 0px 0px;
+  margin: 5px 10px 0px 0px;
+  clear: both;
 }
 .op {
   overflow: hidden;
@@ -85,5 +86,8 @@ body {
 }
 
 .image-info {
-
+  color: #999999;
+  font-size: 13px;
+  display: block;
+  padding-top: 5px;
 }

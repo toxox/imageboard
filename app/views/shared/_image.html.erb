@@ -1,0 +1,8 @@
+<% if image.present? %>
+        <span class="image-info">
+          <%= link_to image.filename, image.url %> -
+          <%= "(#{image.size} B,
+           #{image.width}x#{image.height})
+            Thumbnail displayed, click image for full size." %>
+        </span>
+<% end %>

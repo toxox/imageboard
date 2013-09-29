@@ -14,15 +14,8 @@
     </span>
     <hr>
     <div class="op">
-      <% if discussion.image.present? %>
-        <span class="image-info">
-          <%= link_to discussion.image.filename, discussion.image.url %> -
-          <%= "(#{discussion.image.size} B,
-           #{discussion.image.width}x#{discussion.image.height})
-            Thumbnail displayed, click image for full size." %>
-        </span>
-        <span class="image"><%= thumb_with_link(discussion) %></span>
-      <% end %>
+      <%= render "shared/image", image: discussion.image %>
+      <span class="image"><%= thumb_with_link(discussion) %></span>
       <div class="comment"><%= show(discussion.comment) %></div>
       <% if discussion.posts.count > 3 %>
         <span class="omitted-posts">

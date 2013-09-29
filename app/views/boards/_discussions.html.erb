@@ -37,6 +37,7 @@
           </span>
           <hr>
         <div class="op">
+          <%= render "shared/image", image: post.image %>
           <span class="image"><%= thumb_with_link(post) %></span>
           <div class="comment"><%= show(post.comment) %></div>
         </div>

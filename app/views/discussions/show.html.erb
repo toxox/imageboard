@@ -25,6 +25,7 @@
   </span>
   <hr>
   <div class="op">
+    <%= render "shared/image", image: @discussion.image %>
     <span class="image"><%= thumb_with_link(@discussion) %></span>
     <div class="comment"><%= show(@discussion.comment) %></div>
   </div>

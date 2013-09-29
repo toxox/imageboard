@@ -60,7 +60,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     image[:height]
   end
 
-  def filename
+  def file_name
     self.path.split('/').last if self.present?
   end
 

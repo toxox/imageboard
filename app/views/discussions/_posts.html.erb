@@ -1,5 +1,5 @@
-<% if @discussion.posts.any? %>
-  <% @discussion.posts.each do |post| %>
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
     <div class="panel post-panel radius">
       <span><%= post.name %> - <%= format_time(post.created_at) %>
         #<%= link_to post.id, "javascript:;", class: "post_id" %>

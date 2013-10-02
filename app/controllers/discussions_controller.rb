@@ -7,6 +7,7 @@ class DiscussionsController < ApplicationController
   def show
     @post = Post.new
     @board = Board.friendly.find(params[:board_id])
+    @posts = @discussion.posts.order("created_at")
   end
 
   # GET /discussions/1/edit
@@ -38,10 +39,8 @@ class DiscussionsController < ApplicationController
     respond_to do |format|
       if @discussion.update(discussion_params)
         format.html { redirect_to board_discussion_path(@board, @discussion), notice: 'Discussion was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @discussion.errors, status: :unprocessable_entity }
       end
     end
   end
